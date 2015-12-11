@@ -53,3 +53,18 @@
 		});
 	});
 });
+$(window).load(function() {
+	if ( $('.intro-s').length > 0 ) {
+		$('.intro-s ul li div').each(function() {
+			var h = $(this).outerHeight();
+			if ( h < 106 ) {
+				$(this).css({
+					'margin-top': (106-h)/2+'px'
+				});
+			}
+			$(this).css({
+				'opacity': '1'
+			});
+		});
+	}
+});
